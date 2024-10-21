@@ -1,104 +1,51 @@
 "use client";
-import Image from "next/image";
-import styles from "./about.module.css";
+import "./about.module.css";
 import { Header } from "../components/Header";
+import { BookToRead } from "../components/BookToRead/BookToRead";
+import BookRow from "../components/BookRow/BookRow";
+
+export const dummyBooks: BookToRead[] = [
+  {
+    id: 1,
+    title: "はじめてのReact",
+    authors: "ダミー",
+    memo: "",
+  },
+  {
+    id: 2,
+    title: "React Hooks入門",
+    authors: "ダミー",
+    memo: "",
+  },
+  {
+    id: 3,
+    title: "実践Reactアプリケーション開発",
+    authors: "ダミー",
+    memo: "",
+  },
+];
 
 export default function About() {
+  const bookRows = dummyBooks.map((b) => {
+    return (
+      <BookRow
+        book={b}
+        key={b.id}
+        onMemoChange={(id, memo) => {}}
+        onDelete={(id) => {}}
+      />
+    );
+  });
   return (
     <>
       <Header />
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>
-              src/app/page.tsx Hello about Page,
-            </code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{" "}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
-          </div>
-        </div>
-
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-        </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p>Explore starter templates for Next.js.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p>
-              Instantly deploy your Next.js site to a shareable URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+      <div className="App">
+        <section className="nav">
+          <h1>読みたい本リスト</h1>
+          <div className="button-like">本を追加</div>
+        </section>
+        <section className="main">{bookRows}</section>
+      </div>
     </>
   );
 }
