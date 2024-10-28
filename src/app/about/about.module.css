@@ -16,7 +16,7 @@
   border-bottom: solid 2px rgb(22, 164, 207);
 }
 
-.button-like {
+.buttonLike {
   margin: 5px;
   padding: 4px;
   width: 140px;
@@ -27,7 +27,7 @@
   cursor: pointer;
 }
 
-.button-like:hover {
+.buttonLike:hover {
   opacity: 0.8;
 }
 
@@ -58,7 +58,7 @@
   color: lightgray;
 }
 
-.dialog .search-results {
+.dialog .searchResults {
   height: 500px;
   overflow: auto;
   display: flex;
@@ -66,7 +66,7 @@
   flex-wrap: wrap;
 }
 
-.book-search-item {
+.bookSearchItem {
   margin: 5px;
   padding: 5px;
   background-color: #181a1f;
@@ -76,7 +76,7 @@
   position: relative;
 }
 
-.book-search-item h2 {
+.bookSearchItem h2 {
   font-size: 1.2rem;
   height: 1.4rem;
   margin: 2px 2px 2px;
@@ -88,13 +88,13 @@
   white-space: nowrap;
 }
 
-.book-search-item .authors {
+.bookSearchItem .authors {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.book-search-item .add-book {
+.bookSearchItem .addBook {
   width: 40px;
   height: 40px;
   position: absolute;
@@ -109,11 +109,11 @@
   cursor: pointer;
 }
 
-.book-search-item .add-book:hover {
+.bookSearchItem .addBook:hover {
   opacity: 0.8;
 }
 
-.book-search-item div {
+.bookSearchItem div {
   font-size: 1rem;
   height: 1.2rem;
   margin: 2px 2px 2px;
@@ -121,23 +121,23 @@
   text-align: right;
 }
 
-.book-search-item img {
+.bookSearchItem img {
   margin: 10px 5px;
   height: 180px;
 }
 
-.book-row {
+.bookRow {
   background-color: #181a1f;
   display: flex;
   flex-direction: row;
 }
 
-.book-row:nth-child(even) {
+.bookRow:nth-child(even) {
   background-color: #292c35;
 }
 
-.book-row div {
-  height: 1rem;
+.bookRow div {
+  /* height: 1rem; */
   padding: 1rem;
   font-size: 1rem;
   text-align: left;
@@ -146,15 +146,15 @@
   white-space: nowrap;
 }
 
-.book-row div.title {
+.bookRow div.title {
   width: 350px;
 }
 
-.book-row div.authors {
+.bookRow div.authors {
   width: 280px;
 }
 
-.book-row input {
+.bookRow input {
   width: 450px;
   padding: 15px 2px 0;
   color: aquamarine;
@@ -164,26 +164,26 @@
   border-bottom: 1px solid #fff;
 }
 
-.book-row:nth-child(even) input {
+.bookRow:nth-child(even) input {
   background-color: #292c35;
 }
 
-.book-row input:focus {
+.bookRow input:focus {
   border-bottom: 3px solid #fff;
   font-size: 1.1rem;
 }
 
-.book-row .delete-row {
+.bookRow .deleteRow {
   margin: 10px 15px 10px;
   padding: 4px;
   width: 80px;
-  height: 1.6rem;
+  /* height: 1.6rem; */
   text-align: center;
   font-size: 1.2rem;
   background-color: rgb(230, 163, 20);
   cursor: pointer;
 }
 
-.book-row .delete-row:hover {
+.bookRow .deleteRow:hover {
   opacity: 0.8;
 }

@@ -1,5 +1,5 @@
 "use client";
-import "./about.module.css";
+import styles from "./about.module.css";
 import { Header } from "../components/Header";
 import { BookToRead } from "../components/BookToRead/BookToRead";
 import BookRow from "../components/BookRow/BookRow";
@@ -39,12 +39,12 @@ export default function About() {
   return (
     <>
       <Header />
-      <div className="App">
-        <section className="nav">
+      <div className={styles.App}>
+        <section className={styles.nav}>
           <h1>読みたい本リスト</h1>
-          <div className="button-like">本を追加</div>
+          <div className={styles.buttonLike}>本を追加</div>
         </section>
-        <section className="main">{bookRows}</section>
+        <section className={styles.main}>{bookRows}</section>
       </div>
     </>
   );

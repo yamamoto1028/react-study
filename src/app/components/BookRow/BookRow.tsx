@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import styles from "@/app/about/about.module.css";
 import { BookToRead } from "../BookToRead/BookToRead";
 
 type BookRowProps = {
@@ -20,20 +21,20 @@ const BookRow = (props: BookRowProps) => {
   };
 
   return (
-    <div className="book-row">
-      <div title={title} className="title">
+    <div className={styles.bookRow}>
+      <div title={title} className={styles.title}>
         {title}
       </div>
-      <div title={authors} className="authors">
+      <div title={authors} className={styles.authors}>
         {authors}
       </div>
       <input
         type="text"
-        className="memo"
+        className={styles.memo}
         value={memo}
         onChange={handleMemoChange}
       />
-      <div className="delete-row" onClick={handleDeleteClick}>
+      <div className={styles.deleteRow} onClick={handleDeleteClick}>
         削除
       </div>
     </div>
