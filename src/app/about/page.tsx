@@ -2,10 +2,10 @@
 import styles from "./about.module.css";
 import { Header } from "../components/Header";
 import BookRow from "../components/BookRow/BookRow";
-import { dummyBooks } from "../components/dummyBooks/dummyBooks";
+import { DummyBooks } from "@/app/components/dummyBooks/dummyBooks";
 
 export default function About() {
-  const bookRows = dummyBooks.map((b) => {
+  const bookRows = DummyBooks.map((b) => {
     return (
       <BookRow
         book={b}

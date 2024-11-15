@@ -1,7 +1,7 @@
 "use client";
 import { BookToRead } from "../BookToRead/BookToRead";
 
-export const dummyBooks: BookToRead[] = [
+export const DummyBooks: BookToRead[] = [
   {
     id: 1,
     title: "はじめてのReact",
@@ -21,3 +21,5 @@ export const dummyBooks: BookToRead[] = [
     memo: "",
   },
 ];
+
+export default DummyBooks;
